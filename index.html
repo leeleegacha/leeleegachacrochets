@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeeleeGacha Crochets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffdf8;
+      color: #333;
+    }
+
+    header {
+      background-color: #cde7f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #4a6e81;
+    }
+
+    nav {
+      background-color: #f7f2e9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #4a6e81;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #f7f2e9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    form button {
+      background-color: #cde7f5;
+      color: #4a6e81;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #bad9ea;
+    }
+
+    #confirmation-message {
+      font-weight: bold;
+      margin-top: 20px;
+      color: #4a6e81;
+      display: none;
+    }
+
+    footer {
+      background-color: #cde7f5;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #4a6e81;
+    }
+
+    .socials a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LeeleeGacha Crochets</h1>
+    <p>Handmade crochet with love 💙🧶</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#works">My Work</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="content" id="home">
+    <h2>Welcome!</h2>
+    <p>I'm Leelee and I create cute, custom crochet pieces inspired by the beautiful world of crochet!</p>
+
+    <h2 id="works">✨ My Crochet Work</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/200x200?text=Crochet+1" alt="Work 1" />
+      <img src="https://via.placeholder.com/200x200?text=Crochet+2" alt="Work 2" />
+      <img src="https://via.placeholder.com/200x200?text=Crochet+3" alt="Work 3" />
+    </div>
+  </div>
+
+  <div class="content" id="order">
+    <h2>🧺 Place an Order</h2>
+    <p>Want something custom? Fill out the form below and I’ll get back to you!</p>
+
+    <form onsubmit="showConfirmation(); return true;" action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="hidden_iframe">
+      <input type="text" name="entry.123456" placeholder="Your Name" required />
+      <input type="email" name="entry.234567" placeholder="Your Email" required />
+      <input type="text" name="entry.345678" placeholder="Item you'd like (e.g. frog plushie)" required />
+      <textarea name="entry.456789" rows="4" placeholder="Any extra details or notes?"></textarea>
+      <button type="submit">Submit Order Request</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <p id="confirmation-message">💌 Confirm your order lovely! Thanks for supporting my little business. 💙</p>
+  </div>
+
+  <footer id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: <a href="mailto:leeleegachacrochets@example.com">leeleegachacrochets@example.com</a></p>
+
+    <div class="socials">
+      <a href="https://instagram.com/@leeleegachacrochrts" target="_blank">Instagram</a> |
+      <a href="https://tiktok.com/@leeleegachacrochets" target="_blank">TikTok</a> |
+      <a href="https://etsy.com/shop/@esleedalaky" target="_blank">Etsy Shop</a>
+    </div>
+  </footer>
+
+  <script>
+    function showConfirmation() {
+      document.getElementById("confirmation-message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
